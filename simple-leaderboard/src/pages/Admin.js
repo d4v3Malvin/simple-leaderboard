@@ -1,9 +1,10 @@
 import { useEffect } from "react"
-import { useLeaderboardContext } from "../hooks/useLeaderboardContext"
 import LeaderboardDetail from "../components/LeaderboardDetail"
+import LeaderboardForm from "../components/LeaderboardForm"
+import { useLeaderboardContext } from "../hooks/useLeaderboardContext"
 
 
-const Home = () => {
+const Admin = () => {
 
     const { leaderboards, dispatch } = useLeaderboardContext()
 
@@ -21,16 +22,18 @@ const Home = () => {
         fetchLeaderboard()
     }, [dispatch])
 
-    return (
-        <div className="homepages container-fluid">
+    
+
+    return(
+        <div className="container-fluid">
             <div className="row" style={{paddingTop:"1.5em", paddingBottom: "1.5em"}}>
                 <div className="col">
-                    <h4>Leaderboard</h4>
+                    <h4>Admin</h4>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <table className="table table-borderless table-hover">
+                <table className="table table-borderless table-hover">
                         <thead className="text-center">
                             <tr>
                                 <th scope="col">#</th>
@@ -46,10 +49,12 @@ const Home = () => {
                         </tbody>
                     </table>
                 </div>
+                <div className="col" >
+                    <LeaderboardForm />
+                </div>
             </div>
         </div>
     )
 }
 
-
-export default Home
+export default Admin

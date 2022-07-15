@@ -2,10 +2,10 @@
 
 const LeaderboardDetail = ({leaderboard, index}) => {
 
-    console.log(leaderboard)
+    // console.log(leaderboard)
     return (
-        <tr>
-            <th scope="row">{index}</th>
+        <tr className="text-center">
+            <th scope="row">{index+1}</th>
             <td>{leaderboard.name}</td>
             <td>{leaderboard.challenge}</td>
             <td>{leaderboard.clever}</td>

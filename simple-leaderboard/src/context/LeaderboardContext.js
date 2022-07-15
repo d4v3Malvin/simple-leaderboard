@@ -11,7 +11,9 @@ export const leaderboardReducer = (state, action) => {
     
         case "POST_LEADERBOARD": 
             return {
-                leaderboards: [action.payload, ...state.leaderboard]
+                leaderboards: [action.payload, ...state.leaderboards].sort((a,b) => {
+                    return b.challenge === a.challenge ? b.clever - a.clever : b.challenge - a.challenge 
+                })
             }
         default:
             return state

@@ -3,7 +3,22 @@ body {
   padding: 0;
 }
 
+.navs-link {
+  color: black;
+  text-decoration: none;
+}
+
+.navs-link:hover {
+  color: white;
+}
+
+.navbar {
+  background-color: aqua;
+}
+
+
 .homepages {
   height: 400vh;
   width: 100vh;
+  background-color: #34bdeb;
 }
